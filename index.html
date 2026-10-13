@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Neighborhood — an online action game</title>
+<meta name="description" content="Neighborhood is a fast top-down online action game. Fight, loot and trade in a shared world. Optional in-game Cash buys items in a rotating shop.">
+<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#f3efe6; --muted:#b9b2a3; --bg:#14121a; --card:#1f1c27; --green:#3fd46a; --line:#2e2a38; }
+  * { box-sizing:border-box }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.6 Inter, system-ui, sans-serif }
+  a { color:var(--green) }
+  header { position:relative; min-height:62vh; display:flex; align-items:flex-end;
+           background:linear-gradient(to bottom, rgba(20,18,26,.1), var(--bg)), url(hero.png) center/cover }
+  .wrap { max-width:920px; margin:0 auto; padding:0 20px }
+  h1,h2 { font-family:'Luckiest Guy', cursive; letter-spacing:1px; font-weight:400 }
+  h1 { font-size:clamp(48px,9vw,96px); margin:0 0 4px; text-shadow:0 4px 0 #000 }
+  .tag { font-size:20px; color:var(--muted); margin:0 0 36px }
+  h2 { font-size:34px; margin:56px 0 12px }
+  h3 { margin:24px 0 6px }
+  nav { position:absolute; top:16px; right:20px; font-weight:600 }
+  nav a { margin-left:16px; color:var(--ink); text-decoration:none; text-shadow:0 1px 3px #000 }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px }
+  .price { font-size:28px; font-weight:800 }
+  .cash { color:var(--green); font-weight:800 }
+  table { width:100%; border-collapse:collapse; margin:8px 0 }
+  td,th { text-align:left; padding:8px; border-bottom:1px solid var(--line) }
+  .r-unc{color:#3fec29}.r-rare{color:#268cff}.r-epic{color:#a335ee}.r-leg{color:#ff8000}
+  .r-mys{background:linear-gradient(90deg,#ff4dd8,#4df0ff,#ffe14d,#ff4dd8);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:800}
+  footer { margin:64px 0 0; padding:24px 0 48px; border-top:1px solid var(--line); color:var(--muted); font-size:14px }
+  .small { color:var(--muted); font-size:14px }
+</style>
+</head>
+<body>
+<header>
+  <nav><a href="#shop">Shop</a><a href="#refunds">Refunds</a><a href="#terms">Terms</a><a href="#privacy">Privacy</a><a href="#contact">Contact</a></nav>
+  <div class="wrap">
+    <h1>Neighborhood</h1>
+    <p class="tag">A fast, top-down online action game. Fight through haunted houses, loot gear, build wild spell combos and take on other players in one shared town.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <h2>The game</h2>
+  <p>Neighborhood is a free-to-play online game for desktop (Windows) and iPhone. Every house on the street is a portal into a themed dungeon full of monsters and loot. Players collect weapons, masks and ability cards, combine them into builds, and fight monsters and each other in real time.</p>
+  <p>The game is free to play. Everything that affects a fight can be earned by playing. Purchases are optional.</p>
+
+  <h2 id="shop">What we sell</h2>
+  <p>We sell one thing for real money: <span class="cash">Cash</span>, an in-game currency. Cash is spent inside the game on items in the <b>Item Shop</b>.</p>
+
+  <h3>Cash packs (USD)</h3>
+  <div class="grid">
+    <div class="card"><div class="price">$4.99</div><div class="cash">500 Cash</div></div>
+    <div class="card"><div class="price">$9.99</div><div class="cash">1,000 Cash</div></div>
+    <div class="card"><div class="price">$19.99</div><div class="cash">2,200 Cash</div></div>
+    <div class="card"><div class="price">$49.99</div><div class="cash">5,500 Cash</div></div>
+    <div class="card"><div class="price">$99.99</div><div class="cash">11,500 Cash</div></div>
+  </div>
+
+  <h3>The Item Shop</h3>
+  <p>The Item Shop shows a new set of items every day at midnight Pacific time: weapons (melee and ranged) and masks, in five rarities. Every item shows its full stats before you buy it, and every price also shows its approximate dollar value.</p>
+  <table>
+    <tr><th>Rarity</th><th>Price</th><th>About</th></tr>
+    <tr><td class="r-unc">Uncommon</td><td>500 Cash</td><td>$5</td></tr>
+    <tr><td class="r-rare">Rare</td><td>1,000 Cash</td><td>$10</td></tr>
+    <tr><td class="r-epic">Epic</td><td>2,000 Cash</td><td>$20</td></tr>
+    <tr><td class="r-leg">Legendary</td><td>5,000 Cash</td><td>$50</td></tr>
+    <tr><td><span class="r-mys">Mystic</span></td><td>10,000 Cash</td><td>$100</td></tr>
+  </table>
+  <p class="small">Shop items are never stronger than items that drop in the game. An item is made at the highest item level you have already reached by playing, so money never lifts you above what you have earned. There are no paid random boxes: you always see exactly what you get.</p>
+
+  <h3>Delivery</h3>
+  <p>Cash and items are digital and are delivered to your game account, usually within seconds of payment. You need a signed-in account (Google) to buy. Nothing is shipped physically.</p>
+
+  <h2 id="refunds">Refund &amp; dispute policy</h2>
+  <ul>
+    <li><b>Not delivered?</b> If Cash or an item you paid for does not arrive in your account within 24 hours, contact us and we will deliver it or refund you in full.</li>
+    <li><b>Unspent Cash:</b> you can ask for a full refund of a Cash pack within 14 days of purchase as long as none of that pack's Cash has been spent.</li>
+    <li><b>Spent Cash / items:</b> because items are delivered instantly and can be used right away, Cash that has been spent on items is not refundable, except where the law requires it.</li>
+    <li><b>Mistakes and charges you don't recognize:</b> contact us first at the address below. We answer within 2 business days and will fix genuine mistakes.</li>
+    <li><b>Disputes / chargebacks:</b> if a payment is refunded or charged back, the Cash from it (and items bought with it) is removed from the account.</li>
+    <li>Refunds go back to the original payment method. Card refunds usually show up within 5–10 business days.</li>
+  </ul>
+
+  <h2 id="terms">Terms</h2>
+  <ul>
+    <li>Cash is a license to use an in-game currency. It has no cash value, cannot be exchanged for real money, and cannot be traded, sold or transferred between players.</li>
+    <li>Bought Cash does not expire.</li>
+    <li>Items can be lost or borrowed in normal play (for example when you are defeated), as described in the in-game manual.</li>
+    <li>Accounts that cheat, exploit bugs or commit payment fraud can be suspended.</li>
+    <li>We may rebalance items and change the game over time.</li>
+    <li>You must be 13 or older to play. Players under 18 need a parent or guardian's permission to buy.</li>
+    <li>There are no promotions running at this time.</li>
+  </ul>
+
+  <h2 id="privacy">Privacy</h2>
+  <p>We store your game account (sign-in id, player name, progress, items and purchase history) to run the game. Payments are processed by Stripe; we never see or store your full card number. We do not sell personal data. To delete your account and data, email us.</p>
+
+  <h2 id="contact">Contact</h2>
+  <p>Questions, refunds or support: in the game, open <b>Settings → Report a problem</b> and write to us. It reaches the team directly and we answer within 2 business days.</p>
+</main>
+
+<footer><div class="wrap">© 2026 Neighborhood. All rights reserved. · Last updated October 12, 2026.</div></footer>
+</body>
+</html>
